@@ -1,10 +1,10 @@
-function Home() {
+import Home from "./home/page";
+
+function Page() {
 
   return (
-    <div>
-      Teste
-    </div>
+    <Home />
   );
 }
 
-export default Home
+export default Page
