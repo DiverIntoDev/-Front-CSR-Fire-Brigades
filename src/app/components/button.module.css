@@ -1,0 +1,42 @@
+.button {
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.emphasized {
+  border-radius: 0.5rem;
+  background-color: #39542D;
+  border: 0.1rem solid #39542D;
+}
+
+.standard {
+  background-color: #FFFFFF;
+  color: #39542D;
+  border-radius: 0.5rem;
+  border-color: #39542D;
+}
+
+.disabledEmphasized {
+  border-radius: 0.5rem;
+  background-color: #7575751A;
+  color: #39542D80;
+  border: 0;
+}
+
+.disabledStandard {
+  border-radius: 0.5rem;
+  background-color: #FFFFFF;
+  color: #39542D80;
+  border-color: #39542D80;
+  border: 0.5;
+}
+
+.spaceBetween {
+  margin: 0 0.5rem;
+}
