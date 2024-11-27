@@ -1,0 +1,55 @@
+.header {
+    height: 5rem;
+    width: 100%;
+    background-color: #39542D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.menuLeft {
+    flex-grow: 1;
+}
+
+.menuCenter {
+    flex-grow: 5;
+    color: white;
+}
+
+.menuRight {
+    flex-grow: 1;
+}
+
+.brigadasTitle {
+    font-weight: bold;
+    font-size: 14pt;
+    margin-bottom: 0.5rem; 
+}
+.feedTitle {
+    font-weight: bold;
+    font-size: 14pt;
+    margin-top: 1.5rem; 
+    margin-bottom: 0.5rem;
+}
+
+.section {
+    padding: 1.5rem 1.5rem;
+    color: #263A1E;
+}
+
+.filterSide {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 1.2rem;
+    width: 100%;
+}
+
+.searchBar {
+    flex-grow: 1;
+}
+
+.buttonSearch{
+    flex-grow: 4;
+}
