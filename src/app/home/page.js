@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Input from "../components/input";
 import Button, { ButtonType } from "../components/button";
+import Icons from "../constants/icons";
 
 function Home() {
     return (
@@ -32,15 +33,19 @@ function Home() {
         <div style={{margin: "1rem"}}>
           <text>Testes buttons</text>
           <br/>
-          <Button placeholder="Placeholder" type={ButtonType.emphasized} disabled={false}/>
+          <Button placeholder="Placeholder" disabled={false}/>
           <br/>
-          <Button placeholder="Placeholder" type={ButtonType.emphasized} disabled={true}/>
+          <Button placeholder="Placeholder" disabled={true}/>
           <br/>
           <Button placeholder="Placeholder" type={ButtonType.standard} disabled={false}/>
           <br/>
           <Button placeholder="Placeholder" type={ButtonType.standard} disabled={true}/>
           <br/>
-          <Button type={ButtonType.standard} disabled={false}/>
+          <Button type={ButtonType.standard} disabled={false} firstImage={Icons.adicionar}/>
+          <br/>
+          <Button type={ButtonType.standard} disabled={false} secondImage={Icons.adicionar}/>
+          <br/>
+          <Button placeholder="Placeholder" firstImage={Icons.adicionar} secondImage={Icons.adicionar}/>
           <br/>
         </div>
       </>

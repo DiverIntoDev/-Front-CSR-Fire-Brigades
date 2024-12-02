@@ -15,7 +15,7 @@ Button.propTypes = {
   icon: PropTypes.string
 };
 
-export default function Button({placeholder = "", type = ButtonType.emphasized, disabled = false, icon = null}) {
+export default function Button({placeholder = "", type = ButtonType.emphasized, disabled = false, firstImage = null, secondImage = null}) {
   const getStyle = () => {
     let activeStyle = `${styles.button} ${type}`;
     if (disabled) {
@@ -29,13 +29,23 @@ export default function Button({placeholder = "", type = ButtonType.emphasized, 
       className={getStyle()}
       disabled={disabled}
     >
+      {firstImage &&
+        <Image
+          src={firstImage.value}
+          alt={firstImage.alt}
+          height={20}
+          width={20}
+        />
+      }
       <span className={styles.spaceBetween}>{placeholder}</span>
-      <Image
-        src={Icons.ajuda.value}
-        alt={Icons.ajuda.alt}
-        height={20}
-        width={20}
-      />
+      {secondImage &&
+        <Image
+          src={secondImage.value}
+          alt={secondImage.alt}
+          height={20}
+          width={20}
+        />
+      }
     </button>
   );
 }
