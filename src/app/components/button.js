@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import styles from "./button.module.css";
-import Icons from "../constants/icons";
 import Image from "next/image";
 
 export const ButtonType = {

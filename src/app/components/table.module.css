@@ -1,0 +1,16 @@
+.table {
+  background-color: #FFFFFF;
+  border-radius: 0.5rem;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.header {
+  background-color: #39542D;
+  border-radius: 0.5rem;
+  display: table-caption;
+  width: 100%;
+}
+
+.column {
+  padding: 0 1rem;
+}

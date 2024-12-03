@@ -1,0 +1,7 @@
+.row {
+  color: #263A1E;
+}
+
+.rows:nth-child(n) {
+  border-bottom: 0.1rem solid #18241333;
+}
