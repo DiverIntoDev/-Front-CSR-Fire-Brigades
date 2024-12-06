@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Input from "../components/input";
 import Button, { ButtonType } from "../components/button";
 import Icons from "../constants/icons";
@@ -6,9 +5,9 @@ import Table from "../components/table";
 
 function TestComponents() {
   return (
-    <>
+    <div style={{backgroundColor: "#F6F6F6", height: "100rem"}}>
       <div style={{margin: "1rem"}}>
-        <text>Testes inputs</text>
+        <text style={{color: "black"}}>Testes inputs</text>
         <br/>
         <Input placeholder="Placeholder" label="Label test"/>
         <br/>
@@ -18,7 +17,7 @@ function TestComponents() {
         <br/>
       </div>
       <div style={{margin: "1rem"}}>
-        <text>Testes buttons</text>
+        <text style={{color: "black"}}>Testes buttons</text>
         <br/>
         <Button placeholder="Placeholder" disabled={false}/>
         <br/>
@@ -36,7 +35,7 @@ function TestComponents() {
         <br/>
       </div>
       <div style={{margin: "1rem"}}>
-        <text>Testes table</text>
+        <text style={{color: "black"}}>Testes table</text>
         <br/>
         <Table columns={["Item", "Qtd.", "Valor estimado"]} rows={[{
           item: "Item 1",
@@ -52,7 +51,7 @@ function TestComponents() {
           value: "R$99999,99"
         }]}/>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -29,12 +29,20 @@
   border: 0;
 }
 
+.disabledEmphasized:hover {
+  cursor: initial;
+}
+
 .disabledStandard {
   border-radius: 0.5rem;
   background-color: #FFFFFF;
   color: #39542D80;
   border-color: #39542D80;
   border: 0.5;
+}
+
+.disabledStandard:hover {
+  cursor: initial;
 }
 
 .spaceBetween {

@@ -1,5 +1,7 @@
 .row {
   color: #263A1E;
+  padding: 0;
+  border-bottom: 1px solid #EAF0ED;
 }
 
 .rows:nth-child(n) {
