@@ -1,8 +1,4 @@
 import Link from "next/link";
-import Input from "../components/input";
-import Button, { ButtonType } from "../components/button";
-import Icons from "../constants/icons";
-import Table from "../components/table";
 
 function Home() {
     return (
