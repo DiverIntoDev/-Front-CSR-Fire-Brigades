@@ -1,0 +1,46 @@
+.select {
+  border-radius: 0.5rem;
+  border: 0.1rem solid #757575;
+  padding: 0.5rem;
+  color: #263A1E;
+  background-color: #FFFFFF;
+}
+
+.select:focus {
+  outline-color: #84C868;
+}
+
+.disabled {
+  border-radius: 0.5rem;
+  background-color: #FFFFFF;
+  color: #263A1E;
+  border: 0.1rem solid #757575;
+  padding: 0.5rem;
+}
+
+.error {
+  border-radius: 0.5rem;
+  border: 0.1rem solid #D92D20;
+  padding: 0.5rem;
+  color-scheme: light;
+}
+
+.error:focus {
+  outline-color: #D92D20;
+}
+
+.errormessage {
+  font: normal normal normal 12px/15px Montserrat;
+  letter-spacing: 0px;
+  color: #D92D20;
+}
+
+.icon {
+  position: absolute;
+  text-align: center;
+  padding: 10px 10px 10px 130px;
+}
+
+.labelpadding {
+  padding-bottom: 0.1rem;
+}
