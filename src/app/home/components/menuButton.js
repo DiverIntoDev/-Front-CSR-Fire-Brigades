@@ -4,13 +4,13 @@ import styles from "./menuButton.module.css";
 
 export default function MenuButton() {
   return (
-    <button className={styles.borderRadius}>
+    <div className={styles.borderRadius}>
       <Image
         src={Icons.menu.value}
         alt={Icons.menu.alt}
-        height={28}
-        width={28}
+        height={20}
+        width={20}
       />
-    </button>
+    </div>
   );
 }

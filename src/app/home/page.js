@@ -2,25 +2,30 @@ import "./css.css"
 import MenuButton from "./components/menuButton";
 import HelpButton from "./components/helpButton";
 import Input from "../components/input";
-import Button, {ButtonType} from "../components/button";
 import ViewBrigades from "./components/viewBrigadesButton";
 import AddNewBrigade from "./components/addNewBrigade";
 import FilterButton from "./components/filterButton";
+import Icons from "../constants/icons";
+import Image from "next/image";
+import { Fragment } from "react";
 
 function Home() {
     return (
-      <>
-        <header>
-          <div className="header">
-            <div className="menuLeft">
-              <MenuButton />
-            </div>
-            <div className="menuCenter">
-              logo
-            </div>
-            <div className="menuRight">
-              <HelpButton />
-            </div>
+      <div className="wrapper">
+        <header className="header">
+          <div className="menuLeft">
+            <MenuButton />
+          </div>
+          <div className="menuCenter">
+          <Image
+              src={Icons.logo.value}
+              alt={Icons.logo.alt}
+              height={150}
+              width={150}
+              />
+          </div>
+          <div className="menuRight">
+            <HelpButton />
           </div>
         </header>
         <section className="section">
@@ -46,37 +51,26 @@ function Home() {
             <div className="searchBar">
               <Input placeholder="Pesquisar notícia" />
             </div>
-            <div lassName="buttonSearch">
+            <div className="buttonSearch">
               <FilterButton />
             </div>
           </div>
         </section>
-
-        {/*<div style={{margin: "1rem"}}>
-          <text>Testes inputs</text>
-          <br/>
-          <Input placeholder="Placeholder" label="Label test"/>
-          <br/>
-          <Input placeholder="Placeholder" label="Label test" type="email"/>
-          <br/>
-          <Input placeholder="Desabilitado" disabled={true}/>
-          <br/>
-        </div>
-        <div style={{margin: "1rem"}}>
-          <text>Testes buttons</text>
-          <br/>
-          <Button placeholder="Placeholder" type={ButtonType.emphasized} disabled={false}/>
-          <br/>
-          <Button placeholder="Placeholder" type={ButtonType.emphasized} disabled={true}/>
-          <br/>
-          <Button placeholder="Placeholder" type={ButtonType.standard} disabled={false}/>
-          <br/>
-          <Button placeholder="Placeholder" type={ButtonType.standard} disabled={true}/>
-          <br/>
-          <Button type={ButtonType.standard} disabled={false}/>
-          <br/>
-        </div>*/}
-      </>
+        <footer className="footer">
+          <div className="footerColumn">
+            <p>Entre em contato</p>
+            <p>Contato 1</p>
+            <p>Contato 2</p>
+            <p>Contato 3</p>
+          </div>
+          <div className="footerColumn">
+            <p>FAQ</p>
+            <p>Pergunta 1</p>
+            <p>Pergunta 2</p>
+            <p>Pergunta 3</p>
+          </div>
+        </footer>
+      </div>
     );
   }
 

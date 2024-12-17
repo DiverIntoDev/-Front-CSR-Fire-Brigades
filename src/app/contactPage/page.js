@@ -1,15 +1,15 @@
 import Link from "next/link";
 
-function Brigades() {
+function Contact() {
 
     return (
       <>
         <div>
-          Página atual:  Brigadas
+          Página atual: Contato
         </div>
         <div>
-          <Link href="/contact">
-              Contato
+          <Link href="/brigadesPage">
+              Brigades
           </Link>
         </div>
         <div>
@@ -21,4 +21,4 @@ function Brigades() {
     );
   }
   
-  export default Brigades
+  export default Contact
