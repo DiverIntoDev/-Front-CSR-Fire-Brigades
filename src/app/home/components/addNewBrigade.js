@@ -5,8 +5,8 @@ import Link from "next/link";
 
 export default function AddNewBrigade() {
   return (
-    <Link href="/contact">
-        <button className={styles.button}>
+    <Link href="/contactPage">
+        <div className={styles.button}>
             <div className={styles.image1}>
                 <Image
                     src={Icons.maisbranco.value}
@@ -26,7 +26,7 @@ export default function AddNewBrigade() {
                     width={23}
                     />
             </div>
-        </button>
+        </div>
     </Link>
   );
 }
