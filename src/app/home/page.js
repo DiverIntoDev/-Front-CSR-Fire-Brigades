@@ -20,8 +20,7 @@ function Home() {
           <Image
               src={Icons.logo.value}
               alt={Icons.logo.alt}
-              height={150}
-              width={150}
+              width={160}
               />
           </div>
           <div className="menuRight">
