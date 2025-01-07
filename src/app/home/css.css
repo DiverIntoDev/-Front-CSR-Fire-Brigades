@@ -1,0 +1,96 @@
+.header {
+    height: 5rem;
+    width: 100%;
+    background-color: #39542D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+}
+
+.section {
+    margin-top: 5rem;
+    flex: 1; /* Faz o conteúdo principal expandir para preencher o espaço disponível */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column; /* Layout em coluna */
+    min-height: 100vh;      /* Ocupa pelo menos 100% da altura da viewport */
+  }
+
+.footer {
+    height: 7.5rem;
+    width: 100%;
+    background-color: #39542D;
+    padding: 10px;
+    bottom: 0;       /* Posiciona na parte inferior */
+    display: flex;
+    color: white;
+    padding: 5px 20px;
+    font-size: 10px;
+}
+
+.footerColumn {
+    text-align: left;       /* Alinha o conteúdo ao lado direito */
+    width: 50%;
+}
+
+.footerColumn p {
+    margin: 10px;
+}
+
+:global(button) {
+    box-shadow: none;
+  }
+
+.menuLeft {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuCenter {
+    flex-grow: 5;
+}
+
+.menuRight {
+    flex-grow: 1;
+}
+
+.brigadasTitle {
+    font-weight: bold;
+    font-size: 14pt;
+    margin-bottom: 0.5rem; 
+    color: #263A1E;
+}
+.feedTitle {
+    font-weight: bold;
+    font-size: 14pt;
+    margin-top: 1.5rem; 
+    margin-bottom: 0.5rem;
+    color: #263A1E;
+}
+
+.section {
+    padding: 1.5rem 1.5rem;
+    color: #263A1E;
+}
+
+.filterSide {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 1.2rem;
+    width: 100%;
+}
+
+.searchBar {
+    flex-grow: 1;
+}
+
+.buttonSearch{
+    flex-grow: 4;
+}
