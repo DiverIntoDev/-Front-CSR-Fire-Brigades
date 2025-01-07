@@ -12,8 +12,8 @@ export default function FilterButton() {
         <Image
             src={Icons.filtrar.value}
             alt={Icons.filtrar.alt}
-            height={26}
-            width={26}
+            height={32}
+            width={24}
         />
         </div>
     </button>
