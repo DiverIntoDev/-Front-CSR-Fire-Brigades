@@ -1,14 +1,3 @@
-.header {
-    height: 5rem;
-    width: 100%;
-    background-color: #39542D;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    position: fixed;
-}
-
 .section {
     margin-top: 5rem;
     flex: 1; /* Faz o conteúdo principal expandir para preencher o espaço disponível */
@@ -20,45 +9,9 @@
     min-height: 100vh;      /* Ocupa pelo menos 100% da altura da viewport */
   }
 
-.footer {
-    height: 7.5rem;
-    width: 100%;
-    background-color: #39542D;
-    padding: 10px;
-    bottom: 0;       /* Posiciona na parte inferior */
-    display: flex;
-    color: white;
-    padding: 5px 20px;
-    font-size: 10px;
-}
-
-.footerColumn {
-    text-align: left;       /* Alinha o conteúdo ao lado direito */
-    width: 50%;
-}
-
-.footerColumn p {
-    margin: 10px;
-}
-
 :global(button) {
     box-shadow: none;
   }
-
-.menuLeft {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menuCenter {
-    flex-grow: 5;
-}
-
-.menuRight {
-    flex-grow: 1;
-}
 
 .brigadasTitle {
     font-weight: bold;
