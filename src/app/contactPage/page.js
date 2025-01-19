@@ -1,8 +1,10 @@
 import Button, { ButtonType } from "../components/button";
 import Header from "../components/header";
-import Input from "../components/input";
+import Input, { InputType } from "../components/input";
 import Select from "../components/select";
 import Estados from "../constants/estados";
+import MotivoContato from "../constants/motivoContato";
+import "./css.css";
 
 function Contact() {
 
@@ -15,27 +17,30 @@ function Contact() {
 
             <span style={{color: "#39542D", width: "100%", marginBottom: "1rem"}}>Entre em contato com uma brigada para se tornar um voluntário ou tirar dúvidas.</span>
           </div>
+          <div className="form">
+            <Input label="Nome e Sobrenome" placeholder="Seu nome"/>
 
-          <Input label="Nome e Sobrenome" placeholder="Seu nome"/>
+            <Input label="E-mail de Contato" placeholder="Seu e-mail" type="email"/>
 
-          <Input label="E-mail de Contato" placeholder="Seu e-mail"/>
+            <Input label="Telefone de Contato" placeholder="Seu telefone" type="phone"/>
 
-          <Input label="Telefone de Contato" placeholder="Seu telefone"/>
+            <div style={{display: "flex", width: "100%"}}>
+              <Select label="Estado" items={Estados} placeholder="UF"/>
+              <span style={{marginLeft: "1rem"}}/>
+              <Select label="Cidade" items={Estados} placeholder="Selecione a sua cidade" width="100%"/>
+            </div>
 
-          <div style={{display: "flex", width: "100%"}}>
-            <Select label="Estado" items={Estados} placeholder="UF"/>
-            <span style={{marginLeft: "1rem"}}/>
-            <Select label="Cidade" items={Estados} placeholder="Selecione a sua cidade" width="100%"/>
+            <Select label="Motivo do Contato" placeholder="Selecione o motivo do contato" width="100%" items={MotivoContato}/>
+
+            <Select label="Deseja falar com uma brigada específica? Se sim, selecione a brigada desejada." placeholder="Selecione uma brigada" width="100%"/>
+
+            <Input label="Mensagem" placeholder="Digite aqui a sua mensagem" height="5rem"/>
           </div>
 
-          <Select label="Motivo do Contato" placeholder="Selecione o motivo do contato" width="100%"/>
-
-          <Select label="Deseja falar com uma brigada específica? Se sim, selecione a brigada desejada." placeholder="Selecione uma brigada" width="100%"/>
-
-          <Input label="Mensagem" placeholder="Digite aqui a sua mensagem" height="5rem"/>
-
-          <input style={{marginTop: "2rem", marginRight: "0.5rem", border: "1px solid #39542D"}} type="checkbox" id="terms" name="terms" value="accepted"/>
-          <label htmlFor="terms" style={{color: "#39542D"}}>Afirmo que li e aceito os Termos e Condições</label>
+          <div style={{display: "flex", alignItems: "center", marginTop: "2rem"}}>
+            <input style={{marginRight: "0.5rem", border: "1px solid #39542D"}} type="checkbox" id="terms" name="terms" value="accepted"/>
+            <label htmlFor="terms" style={{color: "#39542D", fontSize: "0.825rem"}}>Afirmo que li e aceito os Termos e Condições</label>
+          </div>
 
           <div style={{display: "flex", marginTop: "1rem"}}>
             <span style={{flexGrow: "1"}}/>
