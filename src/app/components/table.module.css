@@ -10,10 +10,6 @@
   border-collapse: collapse;
 }
 
-.tbody:last-child {
-  border-bottom: 0;
-}
-
 .header {
   background-color: #39542D;
   border-radius: 8px;

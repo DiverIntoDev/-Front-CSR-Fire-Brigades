@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import styles from "./input.module.css";
 import Label from "./label";
 
-export default function Input({label, placeholder, type = "text", disabled = false}) {
+export default function Input({label, placeholder, type = "text", disabled = false, height}) {
   const [hasError, setHasError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("Valor inválido");
   const inputRef = useRef(null);
@@ -54,6 +54,7 @@ export default function Input({label, placeholder, type = "text", disabled = fal
           disabled={disabled}
           onChange={() => validateInput()}
           type={type}
+          style={{height}}
         />
         <br />
       </div>

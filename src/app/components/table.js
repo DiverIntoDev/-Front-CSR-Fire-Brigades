@@ -11,11 +11,11 @@ export default function Table({rows, columns}) {
           ))}
         </tr>
       </thead>
-    <tbody className={styles.tbody}>
-      {rows.map((row, rowIndex) => (
-        <TableRow key={rowIndex} row={row} />
-      ))}
-    </tbody>
+      <tbody className={styles.tbody}>
+        {rows.map((row, rowIndex) => (
+          <TableRow key={rowIndex} row={row} />
+        ))}
+      </tbody>
     </table>
   );
 }

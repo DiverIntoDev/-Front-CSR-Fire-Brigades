@@ -1,7 +1,7 @@
 import styles from "./select.module.css"
 import Label from "./label";
 
-export default function Select({label, disabled, placeholder, items = []}) {
+export default function Select({label, disabled, placeholder, width, items = []}) {
   const getStyle = () => {
     if (disabled) {
       return styles.disabled;
@@ -10,7 +10,7 @@ export default function Select({label, disabled, placeholder, items = []}) {
   };
 
   return (
-    <>
+    <div style={{width}}>
       {label &&
         <div className={styles.labelpadding}>
           <Label text={label}/>
@@ -18,9 +18,11 @@ export default function Select({label, disabled, placeholder, items = []}) {
       }
       <div>
         <select
+          style={{width}}
           className={getStyle()}
           placeholder={placeholder}
           disabled={disabled}
+
         >
           {items.map((item) => {
             return (
@@ -31,6 +33,6 @@ export default function Select({label, disabled, placeholder, items = []}) {
           })}
         </select>
       </div>
-    </>
+    </div>
   );
 }

@@ -12,6 +12,7 @@
 .emphasized {
   border-radius: 0.5rem;
   background-color: #39542D;
+  color: white;
   border: 0.1rem solid #39542D;
 }
 
