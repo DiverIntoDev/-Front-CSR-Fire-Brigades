@@ -16,6 +16,7 @@ import prosseguirbranco from "../icons/prosseguirbranco.svg"
 import toggle1 from "../icons/Toggle-1.svg"
 import toggle from "../icons/Toggle.svg"
 import up from "../icons/up.svg"
+import uplaranja from "../icons/uplaranja.svg"
 import voltar from "../icons/voltar.svg"
 import logo from "../icons/logo.svg"
 
@@ -91,6 +92,10 @@ const Icons = {
   up: {
     value: up,
     alt: "Up"
+  },
+  uplaranja: {
+    value: uplaranja,
+    alt: "UpLaranja"
   },
   voltar: {
     value: voltar,

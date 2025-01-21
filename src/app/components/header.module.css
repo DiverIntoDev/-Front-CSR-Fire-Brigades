@@ -3,22 +3,7 @@
   width: 100%;
   background-color: #39542D;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
-}
-
-.menuLeft {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.menuCenter {
-  flex-grow: 5;
-}
-
-.menuRight {
-  flex-grow: 1;
 }
