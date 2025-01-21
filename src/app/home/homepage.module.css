@@ -1,17 +1,13 @@
 .section {
-    margin-top: 5rem;
-    flex: 1; /* Faz o conteúdo principal expandir para preencher o espaço disponível */
+    flex: 1;
 }
 
 .wrapper {
     display: flex;
-    flex-direction: column; /* Layout em coluna */
-    min-height: 100vh;      /* Ocupa pelo menos 100% da altura da viewport */
+    flex-direction: column;
+    min-height: 100vh;
   }
 
-:global(button) {
-    box-shadow: none;
-  }
 
 .brigadasTitle {
     font-weight: bold;
