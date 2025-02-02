@@ -3,6 +3,9 @@
 import { useRef, useState } from "react";
 import styles from "./input.module.css";
 import Label from "./label";
+import PhoneValidator from "../validators/phoneValidator";
+import TextValidator from "../validators/textValidator";
+import EmailValidator from "../validators/emailValidator";
 
 export default function Input({label, placeholder, height, type = "text", disabled = false}) {
   const [hasError, setHasError] = useState(false);
@@ -19,19 +22,11 @@ export default function Input({label, placeholder, height, type = "text", disabl
     return styles.input;
   };
 
-  const validateInput = () => {
+  const validateInput = (event) => {
     const isValidValueForType = {
-      email: (value) => {
-        return value.includes("@") && (value.endsWith(".com") || value.endsWith(".com.br"));
-      },
-      text: (value) => {
-        return value.length > 0;
-      },
-      phone: (value) => {
-        // Tests if phone matches the pattern: (99) 99999-9999
-        const phoneRegex = /\(\d{2}\) \d{5}-\d{4}/;
-        return phoneRegex.test(value);
-      }
+      email: EmailValidator.make(),
+      text: TextValidator.make(),
+      phone: PhoneValidator.make(event)
     };
     const errorMessageForType = {
       email: "E-mail inválido",
@@ -58,18 +53,18 @@ export default function Input({label, placeholder, height, type = "text", disabl
           className={getStyle()}
           placeholder={placeholder}
           disabled={disabled}
-          onChange={() => validateInput()}
+          onChange={(event) => validateInput(event)}
           type={type}
           style={{height}}
         />
         <br />
       </div>
       {hasError &&
-        <text
+        <span
           className={styles.errormessage}
         >
             {errorMessage}
-        </text>
+        </span>
       }
     </>
   );

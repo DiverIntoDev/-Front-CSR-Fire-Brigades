@@ -14,7 +14,7 @@ Button.propTypes = {
   icon: PropTypes.string
 };
 
-export default function Button({placeholder = "", type = ButtonType.emphasized, disabled = false, firstImage = null, secondImage = null}) {
+export default function Button({placeholder = "", type = ButtonType.emphasized, disabled = false, firstImage = null, secondImage = null, onPress = () => {}}) {
   const getStyle = () => {
     let activeStyle = `${styles.button} ${type}`;
     if (disabled) {
@@ -27,6 +27,7 @@ export default function Button({placeholder = "", type = ButtonType.emphasized, 
     <button
       className={getStyle()}
       disabled={disabled}
+      onClick={(event) => onPress(event)}
     >
       {firstImage &&
         <Image

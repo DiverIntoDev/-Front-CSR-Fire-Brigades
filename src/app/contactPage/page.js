@@ -9,9 +9,11 @@ import StateCodes from "../constants/estados";
 import MotivoContato from "../constants/motivoContato";
 import "./css.css";
 import CitiesByState from "../constants/cidadesPorEstado";
+import { useRouter } from "next/navigation";
 
 function Contact() {
   const [state, setState] = useState(StateCodes[0].key);
+  const router = useRouter();
 
   return (
     <>
@@ -49,7 +51,10 @@ function Contact() {
 
         <div style={{display: "flex", marginTop: "1rem"}}>
           <span style={{flexGrow: "1"}}/>
-          <Button placeholder="Voltar" type={ButtonType.standard}/>
+          <Button
+            placeholder="Voltar"
+            type={ButtonType.standard}
+            onPress={() => router.push("/")}/>
           <span style={{marginLeft: "0.5rem"}}/>
           <Button placeholder="Enviar"/>
         </div>
