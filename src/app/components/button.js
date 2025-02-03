@@ -1,24 +1,16 @@
-import PropTypes from "prop-types";
 import styles from "./button.module.css";
 import Image from "next/image";
 
-export const ButtonType = {
+export const ButtonStyle = {
   emphasized: styles.emphasized,
   standard: styles.standard
 }
 
-Button.propTypes = {
-  placeholder: PropTypes.string,
-  type: PropTypes.string,
-  disabled: PropTypes.bool,
-  icon: PropTypes.string
-};
-
-export default function Button({placeholder = "", type = ButtonType.emphasized, disabled = false, firstImage = null, secondImage = null, onPress = () => {}}) {
+export default function Button({placeholder = "", style = ButtonStyle.emphasized, disabled = false, firstImage = null, secondImage = null, onPress = () => {}, type = "button"}) {
   const getStyle = () => {
-    let activeStyle = `${styles.button} ${type}`;
+    let activeStyle = `${styles.button} ${style}`;
     if (disabled) {
-      return `${activeStyle} ${type === ButtonType.emphasized ? styles.disabledEmphasized : styles.disabledStandard}`;
+      return `${activeStyle} ${style === ButtonStyle.emphasized ? styles.disabledEmphasized : styles.disabledStandard}`;
     }
     return `${activeStyle}`;
   }
@@ -28,6 +20,7 @@ export default function Button({placeholder = "", type = ButtonType.emphasized, 
       className={getStyle()}
       disabled={disabled}
       onClick={(event) => onPress(event)}
+      type={type}
     >
       {firstImage &&
         <Image

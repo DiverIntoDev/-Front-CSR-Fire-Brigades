@@ -1,5 +1,5 @@
 import Input from "../components/input";
-import Button, { ButtonType } from "../components/button";
+import Button, { ButtonStyle } from "../components/button";
 import Icons from "../constants/icons";
 import Table from "../components/table";
 import Select from "../components/select";
@@ -27,13 +27,13 @@ function TestComponents() {
         <br/>
         <Button placeholder="Placeholder" disabled={true}/>
         <br/>
-        <Button placeholder="Placeholder" type={ButtonType.standard} disabled={false}/>
+        <Button placeholder="Placeholder" type={ButtonStyle.standard} disabled={false}/>
         <br/>
-        <Button placeholder="Placeholder" type={ButtonType.standard} disabled={true}/>
+        <Button placeholder="Placeholder" type={ButtonStyle.standard} disabled={true}/>
         <br/>
-        <Button type={ButtonType.standard} disabled={false} firstImage={Icons.adicionar}/>
+        <Button type={ButtonStyle.standard} disabled={false} firstImage={Icons.adicionar}/>
         <br/>
-        <Button type={ButtonType.standard} disabled={false} secondImage={Icons.adicionar}/>
+        <Button type={ButtonStyle.standard} disabled={false} secondImage={Icons.adicionar}/>
         <br/>
         <Button placeholder="Placeholder" firstImage={Icons.adicionar} secondImage={Icons.adicionar}/>
         <br/>

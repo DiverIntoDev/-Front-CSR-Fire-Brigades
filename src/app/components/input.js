@@ -7,7 +7,7 @@ import PhoneValidator from "../validators/phoneValidator";
 import TextValidator from "../validators/textValidator";
 import EmailValidator from "../validators/emailValidator";
 
-export default function Input({label, placeholder, height, type = "text", disabled = false}) {
+export default function Input({label, placeholder, height, type = "text", disabled = false, name}) {
   const [hasError, setHasError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("Valor inválido");
   const inputRef = useRef(null);
@@ -55,6 +55,7 @@ export default function Input({label, placeholder, height, type = "text", disabl
           disabled={disabled}
           onChange={(event) => validateInput(event)}
           type={type}
+          name={name}
           style={{height}}
         />
         <br />

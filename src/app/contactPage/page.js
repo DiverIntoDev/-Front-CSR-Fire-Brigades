@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import Button, { ButtonType } from "../components/button";
+import Button, { ButtonStyle } from "../components/button";
 import Header from "../components/header";
 import Input from "../components/input";
 import Select from "../components/select";
@@ -14,6 +14,18 @@ import { useRouter } from "next/navigation";
 function Contact() {
   const [state, setState] = useState(StateCodes[0].key);
   const router = useRouter();
+  const onSubmit = async () => {
+    const inputNames = ["name", "email", "phone", "message", "state", "city", "contactReason", "brigade"];
+    const data = {};
+
+    inputNames.forEach((name) => {
+      data[name] = document.getElementsByName(name)[0].value;
+    });
+    const acceptedTerms = document.getElementsByName("terms")[0].checked;
+    data["terms"] = acceptedTerms;
+
+    console.log(data);
+  }
 
   return (
     <>
@@ -24,25 +36,28 @@ function Contact() {
 
           <span style={{color: "#39542D", width: "100%", marginBottom: "1rem"}}>Entre em contato com uma brigada para se tornar um voluntário ou tirar dúvidas.</span>
         </div>
-        <div className="form">
-          <Input label="Nome e Sobrenome" placeholder="Seu nome"/>
+        <form
+          id="contactForm"
+          className="form"
+        >
+          <Input label="Nome e Sobrenome" placeholder="Seu nome" name="name"/>
 
-          <Input label="E-mail de Contato" placeholder="Seu e-mail" type="email"/>
+          <Input label="E-mail de Contato" placeholder="Seu e-mail" type="email" name="email"/>
 
-          <Input label="Telefone de Contato" placeholder="Seu telefone" type="phone"/>
+          <Input label="Telefone de Contato" placeholder="Seu telefone" type="phone" name="phone"/>
 
           <div style={{display: "flex", width: "100%"}}>
-            <Select label="Estado" items={StateCodes} placeholder="UF" setSelectedKey={setState}/>
+            <Select label="Estado" items={StateCodes} placeholder="UF" setSelectedKey={setState} name="state"/>
             <span style={{marginLeft: "1rem"}}/>
-            <Select label="Cidade" items={CitiesByState[state] || []} placeholder="Selecione a sua cidade" width="100%"/>
+            <Select label="Cidade" items={CitiesByState[state] || []} placeholder="Selecione a sua cidade" width="100%" name="city"/>
           </div>
 
-          <Select label="Motivo do Contato" placeholder="Selecione o motivo do contato" width="100%" items={MotivoContato}/>
+          <Select label="Motivo do Contato" placeholder="Selecione o motivo do contato" width="100%" items={MotivoContato} name="contactReason"/>
 
-          <Select label="Deseja falar com uma brigada específica? Se sim, selecione a brigada desejada." placeholder="Selecione uma brigada" width="100%"/>
+          <Select label="Deseja falar com uma brigada específica? Se sim, selecione a brigada desejada." placeholder="Selecione uma brigada" width="100%" name="brigade"/>
 
-          <Input label="Mensagem" placeholder="Digite aqui a sua mensagem" height="5rem"/>
-        </div>
+          <Input label="Mensagem" placeholder="Digite aqui a sua mensagem" height="5rem" name="message"/>
+        </form>
 
         <div style={{display: "flex", alignItems: "center", marginTop: "2rem"}}>
           <input style={{marginRight: "0.5rem", border: "1px solid #39542D"}} type="checkbox" id="terms" name="terms" value="accepted"/>
@@ -53,10 +68,14 @@ function Contact() {
           <span style={{flexGrow: "1"}}/>
           <Button
             placeholder="Voltar"
-            type={ButtonType.standard}
+            style={ButtonStyle.standard}
             onPress={() => router.push("/")}/>
           <span style={{marginLeft: "0.5rem"}}/>
-          <Button placeholder="Enviar"/>
+          <Button
+            placeholder="Enviar"
+            onPress={() => onSubmit()}
+            type="submit"
+          />
         </div>
       </div>
     </>
