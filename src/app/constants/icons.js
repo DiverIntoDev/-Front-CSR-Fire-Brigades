@@ -10,6 +10,7 @@ import mais from "../icons/mais.svg"
 import maisbranco from "../icons/maisbranco.svg"
 import menu from "../icons/menu.svg"
 import pesquisar from "../icons/pesquisar.svg"
+import pesquisarverde from "../icons/pesquisarverde.svg"
 import prioridade from "../icons/prioridade.svg"
 import prosseguir from "../icons/prosseguir.svg"
 import prosseguirbranco from "../icons/prosseguirbranco.svg"
@@ -67,6 +68,10 @@ const Icons = {
   },
   pesquisar: {
     value: pesquisar,
+    alt: "Pesquisar"
+  },
+  pesquisarverde: {
+    value: pesquisarverde,
     alt: "Pesquisar"
   },
   prioridade: {

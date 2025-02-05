@@ -3,7 +3,7 @@
     width: 100%;
     background-color: #39542D;
     padding: 10px;
-    bottom: 0;       /* Posiciona na parte inferior */
+    bottom: 0;
     display: flex;
     color: white;
     padding: 5px 20px;
@@ -11,7 +11,7 @@
 }
 
 .footerColumn {
-    text-align: left;       /* Alinha o conteúdo ao lado direito */
+    text-align: left;
     width: 50%;
 }
 

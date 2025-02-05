@@ -14,9 +14,11 @@ export default function Header() {
         <div className={styles.menuCenter}>
           <Link href="/home">
             <Image
+            className={styles.logo}
               src={Icons.logo.value}
-              alt={Icons.logo.alt}
-              width={160} />
+              alt={"Logo"}
+              height={100}
+              width={200} />
           </Link>
         </div>
         <Link href="/FAQPage">
