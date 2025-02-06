@@ -1,9 +1,8 @@
 import styles from "./header.module.css";
-import Icons from "../constants/icons";
 import MenuButton from "../home/components/menuButton";
-import Image from "next/image";
 import HelpButton from "../home/components/helpButton";
 import Link from "next/link";
+import Logo from "./logo";
 
 export default function Header() {
     return (
@@ -13,12 +12,7 @@ export default function Header() {
         </div>
         <div className={styles.menuCenter}>
           <Link href="/home">
-            <Image
-            className={styles.logo}
-              src={Icons.logo.value}
-              alt={"Logo"}
-              height={100}
-              width={200} />
+            <Logo />
           </Link>
         </div>
         <Link href="/FAQPage">

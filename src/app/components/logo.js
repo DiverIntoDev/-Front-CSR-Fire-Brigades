@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="180.329" height="65.43" viewBox="0 0 180.329 65.43">
+const Logo = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="180" height="55" viewBox="0 0 180 65">
   <g id="Grupo_41" data-name="Grupo 41" transform="translate(-102.587 -583.069)">
     <path id="Caminho_4" data-name="Caminho 4" d="M274.75,676.036H104.087V628.186h4.919" transform="translate(0 -30.257)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="3"/>
     <path id="Caminho_5" data-name="Caminho 5" d="M379.814,628.186h70.278v9.24" transform="translate(-175.342 -30.257)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="3"/>
@@ -20,3 +21,7 @@
     <path id="Caminho_16" data-name="Caminho 16" d="M564.919,745.325l4.329,2.719v-5.438Z" transform="translate(-292.333 -99.546)" fill="#fff"/>
   </g>
 </svg>
+
+  );
+  
+  export default Logo;
