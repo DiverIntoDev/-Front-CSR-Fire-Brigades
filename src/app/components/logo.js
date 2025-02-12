@@ -1,9 +1,9 @@
 const Logo = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="180" height="55" viewBox="0 0 180 65">
   <g id="Grupo_41" data-name="Grupo 41" transform="translate(-102.587 -583.069)">
-    <path id="Caminho_4" data-name="Caminho 4" d="M274.75,676.036H104.087V628.186h4.919" transform="translate(0 -30.257)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="3"/>
-    <path id="Caminho_5" data-name="Caminho 5" d="M379.814,628.186h70.278v9.24" transform="translate(-175.342 -30.257)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="3"/>
-    <text id="conexão" transform="translate(114.547 603.069)" fill="#fff" font-size="19" font-family="Poppins-Bold, Poppins" font-weight="700"><tspan x="0" y="0">conexão</tspan></text>
+    <path id="Caminho_4" data-name="Caminho 4" d="M274.75,676.036H104.087V628.186h4.919" transform="translate(0 -30.257)" fill="none" stroke="#fff" strokeMiterlimit="10" strokeWidth="3"/>
+    <path id="Caminho_5" data-name="Caminho 5" d="M379.814,628.186h70.278v9.24" transform="translate(-175.342 -30.257)" fill="none" stroke="#fff" strokeMiterlimit="10" strokeWidth="3"/>
+    <text id="conexão" transform="translate(114.547 603.069)" fill="#fff" fontSize="19" fontFamily="Poppins-Bold, Poppins" fontWeight="700"><tspan x="0" y="0">conexão</tspan></text>
     <g id="Grupo_4" data-name="Grupo 4" transform="translate(115.375 612.814)">
       <g id="Grupo_3" data-name="Grupo 3" transform="translate(0 0)">
         <path id="Caminho_6" data-name="Caminho 6" d="M152.342,673.711a6.07,6.07,0,0,1-.808,8.181,8.556,8.556,0,0,1-5.657,1.7H135.09V660.434h10.424a8.551,8.551,0,0,1,5.526,1.616,5.862,5.862,0,0,1,.924,7.785,5.541,5.541,0,0,1-2.854,1.88A5.39,5.39,0,0,1,152.342,673.711ZM140.731,669.8h3.695a3.269,3.269,0,0,0,2.128-.61,2.192,2.192,0,0,0,.742-1.8,2.241,2.241,0,0,0-.742-1.814,3.212,3.212,0,0,0-2.128-.627h-3.695Zm6.35,8.593a2.284,2.284,0,0,0,.775-1.864,2.386,2.386,0,0,0-.808-1.913,3.311,3.311,0,0,0-2.226-.693h-4.091v5.113h4.157A3.345,3.345,0,0,0,147.081,678.4Z" transform="translate(-135.09 -660.104)" fill="#fff"/>
