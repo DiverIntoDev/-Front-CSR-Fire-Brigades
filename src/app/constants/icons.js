@@ -10,6 +10,7 @@ import mais from "../icons/mais.svg"
 import maisbranco from "../icons/maisbranco.svg"
 import menu from "../icons/menu.svg"
 import pesquisar from "../icons/pesquisar.svg"
+import pesquisarverde from "../icons/pesquisarverde.svg"
 import prioridade from "../icons/prioridade.svg"
 import prosseguir from "../icons/prosseguir.svg"
 import prosseguirbranco from "../icons/prosseguirbranco.svg"
@@ -18,7 +19,6 @@ import toggle from "../icons/Toggle.svg"
 import up from "../icons/up.svg"
 import uplaranja from "../icons/uplaranja.svg"
 import voltar from "../icons/voltar.svg"
-import logo from "../icons/logo.svg"
 
 const Icons = {
   adicionar: {
@@ -69,6 +69,10 @@ const Icons = {
     value: pesquisar,
     alt: "Pesquisar"
   },
+  pesquisarverde: {
+    value: pesquisarverde,
+    alt: "Pesquisar"
+  },
   prioridade: {
     value: prioridade,
     alt: "Prioridade"
@@ -100,10 +104,6 @@ const Icons = {
   voltar: {
     value: voltar,
     alt: "Voltar"
-  },
-  logo: {
-    value: logo,
-    alt: "Logo"
   }
 };
 

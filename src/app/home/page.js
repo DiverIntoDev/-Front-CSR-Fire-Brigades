@@ -5,6 +5,7 @@ import FilterButton from "./components/filterButton";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import styles from "./homepage.module.css";
+import SearchBar from "./components/searchbar";
 
 function Home() {
     return (
@@ -32,7 +33,7 @@ function Home() {
           </div>
           <div className={styles.filterSide}>
             <div className={styles.searchBar}>
-              <Input placeholder="Pesquisar notícia" />
+              <SearchBar placeholder="Pesquisar Notícia" />
             </div>
             <div className={styles.buttonSearch}>
               <FilterButton />

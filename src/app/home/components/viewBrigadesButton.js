@@ -7,23 +7,23 @@ export default function ViewBrigades() {
   return (
     <Link href="/viewBrigadesPage">
         <div className={styles.button}>
-            <div className={styles.image1}>
+            <div className={styles.icon}>
                 <Image
                     src={Icons.localizacaobranco.value}
                     alt={Icons.localizacaobranco.alt}
-                    height={23}
-                    width={23}
+                    height={21}
+                    width={21}
                     />
             </div>
             <div className={styles.content}>
                 Visualizar Brigadas
             </div>
-            <div className={styles.image2}>
+            <div className={styles.icon}>
             <Image
                     src={Icons.prosseguirbranco.value}
                     alt={Icons.prosseguirbranco.alt}
-                    height={23}
-                    width={23}
+                    height={21}
+                    width={21}
                     />
             </div>
         </div>

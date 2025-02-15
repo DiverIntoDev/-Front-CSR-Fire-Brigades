@@ -30,7 +30,7 @@
 
 .item.active .question {
     border-bottom: none; /* Remove a borda quando a resposta estiver visível */
-    color: orange
+    color: #BC6C25;
 }
   
 .arrow {
@@ -42,7 +42,7 @@
 
 .arrow.open {
   transform: rotate(0deg);
-  color: orange;
+  color: #BC6C25;
 }
 
 .answer {
