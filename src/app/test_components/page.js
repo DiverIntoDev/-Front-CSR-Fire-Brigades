@@ -14,14 +14,14 @@ function TestComponents() {
   return (
     <div style={{backgroundColor: "#F6F6F6", height: "100rem"}}>
       <div style={{margin: "1rem"}}>
-        <text style={{color: "black"}}>Testes select</text>
+        <span style={{color: "black"}}>Testes select</span>
         <br/>
         <Select items={mockedItems}/>
         <br/>
         <Select items={mockedItems} placeholder="Placeholder" disabled={true}/>
       </div>
       <div style={{margin: "1rem"}}>
-        <text style={{color: "black"}}>Testes buttons</text>
+        <span style={{color: "black"}}>Testes buttons</span>
         <br/>
         <Button placeholder="Placeholder" disabled={false}/>
         <br/>
@@ -39,7 +39,7 @@ function TestComponents() {
         <br/>
       </div>
       <div style={{margin: "1rem"}}>
-        <text style={{color: "black"}}>Testes table</text>
+        <span style={{color: "black"}}>Testes table</span>
         <br/>
         <Table columns={["Item", "Qtd.", "Valor estimado"]} rows={[{
           item: "Item 1",
@@ -56,7 +56,7 @@ function TestComponents() {
         }]}/>
       </div>
       <div style={{margin: "1rem"}}>
-        <text style={{color: "black"}}>Testes inputs</text>
+        <span style={{color: "black"}}>Testes inputs</span>
         <br/>
         <Input placeholder="Placeholder" label="Label test"/>
         <br/>

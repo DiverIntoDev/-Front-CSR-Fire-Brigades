@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation";
 
 function Contact() {
   const [state, setState] = useState(StateCodes[0].key);
+  const [contactReason, setContactReason] = useState(MotivoContato[0].key);
   const router = useRouter();
   const onSubmit = async () => {
     const inputNames = ["name", "email", "phone", "message", "state", "city", "contactReason", "brigade"];
@@ -52,9 +53,11 @@ function Contact() {
             <Select label="Cidade" items={CitiesByState[state] || []} placeholder="Selecione a sua cidade" width="100%" name="city"/>
           </div>
 
-          <Select label="Motivo do Contato" placeholder="Selecione o motivo do contato" width="100%" items={MotivoContato} name="contactReason"/>
+          <Select label="Motivo do Contato" placeholder="Selecione o motivo do contato" width="100%" items={MotivoContato} name="contactReason" setSelectedKey={setContactReason}/>
 
-          <Select label="Deseja falar com uma brigada específica? Se sim, selecione a brigada desejada." placeholder="Selecione uma brigada" width="100%" name="brigade"/>
+          { !["CADASTRO", "ADMINISTRADOR"].includes(contactReason) &&
+            <Select label="Deseja falar com uma brigada específica? Se sim, selecione a brigada desejada." placeholder="Selecione uma brigada" width="100%" name="brigade" />
+          }
 
           <Input label="Mensagem" placeholder="Digite aqui a sua mensagem" height="5rem" name="message"/>
         </form>

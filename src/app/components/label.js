@@ -4,10 +4,10 @@ import styles from "./label.module.css";
 
 export default function Label({text}) {
   return (
-    <text
+    <span
       className={styles.label}
     >
       {text}
-    </text>
+    </span>
   );
 }

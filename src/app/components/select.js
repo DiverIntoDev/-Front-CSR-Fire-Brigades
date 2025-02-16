@@ -1,7 +1,7 @@
 import styles from "./select.module.css"
 import Label from "./label";
 
-export default function Select({label, disabled, placeholder, width, items = [], name, setSelectedKey = () => {}}) {
+export default function Select({label, disabled, placeholder, width, items = [], name, setSelectedKey}) {
   const getStyle = () => {
     if (disabled) {
       return styles.disabled;
@@ -22,7 +22,7 @@ export default function Select({label, disabled, placeholder, width, items = [],
           className={getStyle()}
           placeholder={placeholder}
           disabled={disabled}
-          onChange={(e) => setSelectedKey(e.target.value)}
+          onChange={(e) => setSelectedKey?.(e.target.value)}
           name={name}
         >
           {items.map((item) => {
