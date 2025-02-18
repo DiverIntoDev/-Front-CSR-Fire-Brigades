@@ -6,7 +6,7 @@ import Header from "../components/header";
 import Input from "../components/input";
 import Select from "../components/select";
 import StateCodes from "../constants/estados";
-import MotivoContato from "../constants/motivoContato";
+import MotivoContato, { MotivoContatoChave } from "../constants/motivoContato";
 import "./css.css";
 import CitiesByState from "../constants/cidadesPorEstado";
 import { useRouter } from "next/navigation";
@@ -56,7 +56,7 @@ function Contact() {
 
           <Select label="Motivo do Contato" placeholder="Selecione o motivo do contato" width="100%" items={MotivoContato} name="contactReason" setSelectedKey={setContactReason}/>
 
-          { !["CADASTRO", "ADMINISTRADOR"].includes(contactReason) &&
+          { ![MotivoContatoChave.CADASTRO, MotivoContatoChave.ADMINISTRADOR].includes(contactReason) &&
             <Select label="Deseja falar com uma brigada específica? Se sim, selecione a brigada desejada." placeholder="Selecione uma brigada" width="100%" name="brigade" />
           }
 
