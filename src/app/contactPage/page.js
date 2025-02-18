@@ -10,6 +10,7 @@ import MotivoContato from "../constants/motivoContato";
 import "./css.css";
 import CitiesByState from "../constants/cidadesPorEstado";
 import { useRouter } from "next/navigation";
+import Footer from "../components/footer";
 
 function Contact() {
   const [state, setState] = useState(StateCodes[0].key);
@@ -81,6 +82,7 @@ function Contact() {
           />
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
