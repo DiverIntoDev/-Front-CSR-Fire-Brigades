@@ -1,15 +1,15 @@
 export default class PhoneFormatter {
-  static format(phone) {
+  static format(phone, inputType) {
     if (phone.length === 2) {
       return this.#addDDDtoPhone(phone);
     }
-    if (phone.length === 9) {
+    if (phone.length === 9 && inputType !== "deleteContentBackward") {
       return this.#addDashToPhone(phone);
     }
     if (phone.length === 15) {
       return this.#replaceDashPositionForCellphone(phone);
     }
-    return phone;
+    return this.#limitCharacters(phone);
   }
 
   static #replaceDashPositionForCellphone(phone) {
@@ -22,5 +22,10 @@ export default class PhoneFormatter {
 
   static #addDDDtoPhone(phone) {
     return phone.replace(/(\d{2})/, "($1) ");
+  }
+
+  static #limitCharacters(phone) {
+    const limit = 15;
+    return phone.slice(0, limit);
   }
 }

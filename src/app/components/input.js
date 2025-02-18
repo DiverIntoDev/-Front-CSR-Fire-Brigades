@@ -33,7 +33,7 @@ export default function Input({label, placeholder, height, type = "text", disabl
       text: "Valor inválido",
       phone: "Insira um número de telefone no seguinte formato: (99) 99999-9999"
     }
-    const isInvalid = !isValidValueForType[type](inputRef.current.value);
+    const isInvalid = !isValidValueForType[type](inputRef.current.value, event);
     setHasError(isInvalid);
     if (isInvalid) {
       setErrorMessage(errorMessageForType[type]);

@@ -7,8 +7,8 @@ export default class PhoneValidator {
   ];
 
   static make(event) {
-    return (phone) => {
-      const formattedPhone = PhoneFormatter.format(phone);
+    return (phone, currentEvent) => {
+      const formattedPhone = PhoneFormatter.format(phone, currentEvent.nativeEvent.inputType);
       event.target.value = formattedPhone;
       return this.#validPhoneRegexes.some(regex => {
         return regex.test(formattedPhone) && formattedPhone.length >= 14 && formattedPhone.length <= 15;
