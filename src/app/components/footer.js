@@ -4,16 +4,16 @@ export default function Footer() {
     return (
       <footer className={styles.footer}>
         <div className={styles.footerColumn}>
-          <p>Entre em contato</p>
+          <p className={styles.footerBold}>Entre em contato</p>
           <p>Contato 1</p>
           <p>Contato 2</p>
           <p>Contato 3</p>
         </div>
         <div className={styles.footerColumn}>
-          <p>FAQ</p>
-          <p>Pergunta 1</p>
-          <p>Pergunta 2</p>
-          <p>Pergunta 3</p>
+          <p className={styles.footerBold}>FAQ</p>
+          <p>Como cadastrar uma brigada?</p>
+          <p>Como posso fazer uma doação?</p>
+          <p>Como posso me voluntariar?</p>
         </div>
       </footer>
     );

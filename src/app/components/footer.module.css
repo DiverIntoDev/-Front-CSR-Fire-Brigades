@@ -16,5 +16,9 @@
 }
 
 .footerColumn p {
-    margin: 10px;
+    margin: 10px 5px;
+}
+
+.footerBold {
+    font-weight: bold;
 }
