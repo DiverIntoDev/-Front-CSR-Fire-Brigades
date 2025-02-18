@@ -33,9 +33,9 @@ function Contact() {
       <Header/>
       <div style={{margin: "1rem"}}>
         <div style={{display: "flex", flexWrap: "wrap"}}>
-          <span style={{color: "#39542D", fontWeight: "bolder", fontSize: "1rem", width: "100%", marginBottom: "1rem"}}>Contato</span>
+          <span style={{color: "#39542D", fontWeight: "bolder", fontSize: "1rem", width: "100%", marginBottom: "1rem", font: "normal normal bold 24px/29px 'Montserrat'", fontFamily: "'Montserrat', sans-serif"}}>Contato</span>
 
-          <span style={{color: "#39542D", width: "100%", marginBottom: "1rem"}}>Entre em contato com uma brigada para se tornar um voluntário ou tirar dúvidas.</span>
+          <span style={{color: "#39542D", width: "100%", marginBottom: "1rem", font: "normal normal normal 16px/20px 'Montserrat'", fontFamily: "'Montserrat', sans-serif"}}>Entre em contato com uma brigada para se tornar um voluntário ou tirar dúvidas.</span>
         </div>
         <form
           id="contactForm"
@@ -64,7 +64,7 @@ function Contact() {
 
         <div style={{display: "flex", alignItems: "center", marginTop: "2rem"}}>
           <input style={{marginRight: "0.5rem", border: "1px solid #39542D"}} type="checkbox" id="terms" name="terms" value="accepted"/>
-          <label htmlFor="terms" style={{color: "#39542D", fontSize: "0.825rem"}}>Afirmo que li e aceito os Termos e Condições</label>
+          <label htmlFor="terms" style={{color: "#39542D", font: "normal normal normal 16px/20px 'Montserrat'", fontFamily: "'Montserrat', sans-serif" }}>Afirmo que li e aceito os Termos e Condições</label>
         </div>
 
         <div style={{display: "flex", marginTop: "1rem"}}>

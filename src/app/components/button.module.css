@@ -46,6 +46,14 @@
   cursor: initial;
 }
 
-.spaceBetween {
+.buttonLabel {
   margin: 0 0.5rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0px;
+  opacity: 1;
 }

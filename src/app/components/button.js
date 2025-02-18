@@ -30,7 +30,7 @@ export default function Button({placeholder = "", style = ButtonStyle.emphasized
           width={20}
         />
       }
-      <span className={styles.spaceBetween}>{placeholder}</span>
+      <span className={styles.buttonLabel}>{placeholder}</span>
       {secondImage &&
         <Image
           src={secondImage.value}
