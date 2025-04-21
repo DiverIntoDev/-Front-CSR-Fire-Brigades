@@ -2,6 +2,7 @@ import adicionar from "../icons/adicionar.svg";
 import ajuda from "../icons/ajuda.svg"
 import ajudabranco from "../icons/ajudabranco.svg"
 import check from "../icons/check.svg"
+import checkbranco from "../icons/checkbranco.svg"
 import filtrar from "../icons/filtrar.svg"
 import globo from "../icons/globo.svg"
 import localizacao from "../icons/localização.svg"
@@ -35,6 +36,10 @@ const Icons = {
   },
   check: {
     value: check,
+    alt: "Check"
+  },
+  checkbranco: {
+    value: checkbranco,
     alt: "Check"
   },
   filtrar: {

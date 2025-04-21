@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Icons from "../constants/icons";
+import Button from "./button";
 
 export default function SaveModal({}) {
   const router = useRouter();
@@ -16,9 +17,9 @@ export default function SaveModal({}) {
         height: "50%",
         color: "#000000",
         backgroundColor: "#FFFFFF",
-        border: "1px solid #000000`",
+        border: "1px solid rgba(0,0,0,0.10)",
+        borderRadius: "5% 5% 0 0",
         padding: "1rem",
-        borderRadius: "5px",
         zIndex: "1000",
         display: "flex",
         flexWrap: "wrap",
@@ -38,30 +39,33 @@ export default function SaveModal({}) {
         Seu contato foi enviado!
       </span>
       <Image
-          src={Icons.check.value}
-          alt={Icons.check.alt}
+          src={Icons.checkbranco.value}
+          alt={Icons.checkbranco.alt}
           height={50}
           width={50}
+          style={{
+            backgroundColor: "#39542D",
+            objectFit: "scale-down",
+            borderRadius: "50%"
+          }}
       />
-      <button
-        style={{
-          backgroundColor: "#39542D",
-          color: "#FFFFFF",
-          marginTop: "1rem",
-          width: "100%",
-          padding: "0.5rem 1rem",
-          borderRadius: "5px",
-          border: "none",
-          cursor: "pointer"
-        }}
-        onClick={() => {
-          document.body.style.transition = "opacity 0.5s";
-          document.body.style.opacity = "1";
-          router.push("/");
-        }}
-      >
-        Voltar para a página inicial
-      </button>
+      <span style={{
+        color: "#39542D",
+        font: "normal normal normal 15px/18px 'Montserrat'",
+        fontFamily: "'Montserrat', sans-serif"
+      }}>
+        Agradecemos o seu interesse. Entraremos em contato em até 15 dias pelo e-mail ou telefone informados no formulário.
+      </span>
+      <div>
+        <Button
+          placeholder="Voltar para a página inicial"
+          onPress={() => {
+            document.body.style.transition = "opacity 0.5s";
+            document.body.style.opacity = "1";
+            router.push("/");
+          }}
+        />
+      </div>
     </div>
   );
 }

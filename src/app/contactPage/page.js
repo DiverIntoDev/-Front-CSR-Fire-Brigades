@@ -30,7 +30,12 @@ function Contact() {
 
     console.log(data);
 
-    setIsSaveSuccess(true);
+    try {
+      const response = await Promise.resolve();
+      setIsSaveSuccess(true);
+    } catch (error) {
+      console.error("Error saving data:", error);
+    }
   }
 
   return (
