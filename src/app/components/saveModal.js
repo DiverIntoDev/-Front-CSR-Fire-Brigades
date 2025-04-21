@@ -31,32 +31,42 @@ export default function SaveModal({}) {
         color: "#39542D",
         fontWeight: "bolder",
         fontSize: "1rem",
-        width: "100%",
-        marginBottom: "1rem",
+        width: "40%",
         font: "normal normal bold 24px/29px 'Montserrat'",
-        fontFamily: "'Montserrat', sans-serif"
+        fontFamily: "'Montserrat', sans-serif",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
       }}>
         Seu contato foi enviado!
       </span>
-      <Image
-          src={Icons.checkbranco.value}
-          alt={Icons.checkbranco.alt}
-          height={50}
-          width={50}
-          style={{
-            backgroundColor: "#39542D",
-            objectFit: "scale-down",
-            borderRadius: "50%"
-          }}
-      />
+      <div style={{width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+        <Image
+            src={Icons.checkbranco.value}
+            alt={Icons.checkbranco.alt}
+            height={75}
+            width={75}
+            style={{
+              backgroundColor: "#39542D",
+              objectFit: "scale-down",
+              borderRadius: "50%"
+            }}
+        />
+      </div>
       <span style={{
         color: "#39542D",
         font: "normal normal normal 15px/18px 'Montserrat'",
-        fontFamily: "'Montserrat', sans-serif"
+        fontFamily: "'Montserrat', sans-serif",
+        width: "75%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
       }}>
-        Agradecemos o seu interesse. Entraremos em contato em até 15 dias pelo e-mail ou telefone informados no formulário.
+        Agradecemos o seu interesse.
+        <br/>
+        Entraremos em contato em até 15 dias pelo e-mail ou telefone informados no formulário.
       </span>
-      <div>
+      <div style={{display: "flex", width: "100%", justifyContent: "center", alignItems: "center"}}>
         <Button
           placeholder="Voltar para a página inicial"
           onPress={() => {
