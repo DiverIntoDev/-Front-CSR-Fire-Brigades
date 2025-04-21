@@ -4,12 +4,29 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Icons from "../constants/icons";
 import Button from "./button";
+import { useEffect, useRef } from "react";
 
 export default function SaveModal({}) {
+  const modal = useRef(null);
   const router = useRouter();
+
+
+  useEffect(() => {
+    const appearingFromBottom = [
+      { transform: "translateY(100%)" },
+      { transform: "translateY(0%)" }
+    ];
+    const modalTiming = {
+      duration: 200,
+      iterations: 1
+    };
+
+    modal.current.animate(appearingFromBottom, modalTiming);
+  }, [modal])
 
   return (
     <div
+      ref={modal}
       style={{
         position: "fixed",
         bottom: "0",
